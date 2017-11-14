@@ -1,13 +1,29 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar >
+
+    <!--<ion-buttons start>-->
+    <!--<button ion-button icon-only>-->
+    <!--<ion-icon name="contact"></ion-icon>-->
+    <!--</button>-->
+    <!--</ion-buttons>-->
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      Ionic Blank
+      Trailers App
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="doClick()">
+        <ion-icon name="cog"></ion-icon>
+      </button>
+
+    </ion-buttons>
   </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  Here there are the list of trailers
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
