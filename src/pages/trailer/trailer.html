@@ -7,12 +7,13 @@
 
 <ion-content>
   <div>
-    <h3>{{trailer.title}}</h3><br>
-    <img [src]="trailer.poster" alt="affiche"><br>
+    <h3 class="title">{{trailer.title}}</h3><br>
+    <img class="image" [src]="trailer.poster" alt="affiche"><br>
 
-    <h5>Director(s): {{trailer.directors}}</h5>
+    <h5 class="title">Director(s): {{trailer.directors}}</h5>
+    <p align="center">Genre(s)</p>
     <div *ngFor="let g of trailer.genre" align="center">
-      <span>Genre: {{g}}</span>
+       <span>{{g}}</span>
     </div>
 
     <h5>Distribution</h5>
