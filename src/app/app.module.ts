@@ -12,7 +12,7 @@ import { PreferencesPage } from "../pages/preferences/preferences";
 import { ApiServicesProvider } from "../providers/api-services/api-services";
 import { TrailerServicesProvider } from "../providers/trailer-services/trailer-services";
 import { HttpClientModule } from "@angular/common/http";
-import {TrailerPage} from "../pages/trailer/trailer";
+import { TrailerPage } from "../pages/trailer/trailer";
 
 @NgModule({
   declarations: [

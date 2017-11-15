@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import { NavController, NavParams} from 'ionic-angular';
 import { Movie } from "../../models/movie";
 import { TrailerServicesProvider } from "../../providers/trailer-services/trailer-services";
 import * as _ from 'lodash';
 import {TrailerPage} from "../trailer/trailer";
 
-//@IonicPage()
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
