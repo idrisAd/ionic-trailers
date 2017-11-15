@@ -21,6 +21,10 @@ export class LoginPage {
     alert.present();
   }
 
+  logForm(form){
+
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
