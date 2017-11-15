@@ -23,19 +23,24 @@
   <!--</ion-list>-->
   <!--<button ion-button (click)="showAlert()">Sign in</button>-->
 
-  <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
-      <ion-item>
-        <ion-input type="text" placeholder="Mail"></ion-input>
-      </ion-item>
-    <br>
+  <form [formGroup]="user" (ngSubmit)="logForm()">
     <ion-item>
-      <ion-input type="password" placeholder="Password"></ion-input>
+      <ion-icon *ngIf="user.get('email').invalid" name="close-circle" item-start></ion-icon>
+      <ion-icon *ngIf="user.get('email').valid" name="checkmark-circle" item-start></ion-icon>
+      <ion-label>Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Se souvenir de moi</ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-icon *ngIf="user.get('password').invalid" name="close-circle" item-start></ion-icon>
+      <ion-icon *ngIf="user.get('password').valid" name="checkmark-circle" item-start></ion-icon>
+      <ion-label>Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
-    <button ion-button type="submit" block>Sign in</button>
+    <ion-item>
+      <ion-label>Remember Me</ion-label>
+      <ion-checkbox (click)="checkboxToggle()"></ion-checkbox>
+    </ion-item>
+    <button ion-button type="submit" [disabled]="!user.valid">Connection</button>
   </form>
 
 
