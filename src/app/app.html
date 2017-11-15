@@ -11,12 +11,13 @@
         <ion-icon name="contact"> Profil</ion-icon>
       </button>
 
-      <button ion-item>
+      <button ion-item (click)="goToFavoris()">
         <ion-icon class="star" name="star"></ion-icon>
         Favoris
       </button>
-      <button ion-item>
-        Preferences
+      <button ion-item (click)="goToSetting()">
+        <ion-icon name="cog"></ion-icon>
+        Préférences
       </button>
     </ion-list>
   </ion-content>

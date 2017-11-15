@@ -5,6 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { FavorisPage } from "../pages/favoris/favoris";
+import { PreferencesPage } from "../pages/preferences/preferences";
+
 
 @Component({
   templateUrl: 'app.html'
@@ -27,6 +30,16 @@ export class MyApp {
 
   goToLog(){
     this.navCtrl.push(LoginPage);
+    this.menuCtrl.close();
+  }
+
+  goToFavoris(){
+    this.navCtrl.push(FavorisPage);
+    this.menuCtrl.close();
+  }
+
+  goToSetting(){
+    this.navCtrl.push(PreferencesPage);
     this.menuCtrl.close();
   }
 

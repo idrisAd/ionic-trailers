@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{trailer.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div>
+    <h3>{{trailer.title}}</h3><br>
+    <img [src]="trailer.poster" alt="affiche"><br>
+
+    <h5>{{trailer.directors}}</h5>
+    <div *ngFor="let g of trailer.genre" align="center">
+      <span> {{g}}</span>
+    </div>
+
+    <h5>Distribution</h5>
+    <ul *ngFor="let act of trailer.actors">
+      <li>{{act}}</li>
+    </ul>
+  </div>
+
+</ion-content>
