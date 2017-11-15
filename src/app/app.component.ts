@@ -28,6 +28,11 @@ export class MyApp {
     });
   }
 
+  goToHome(){
+    this.navCtrl.push(HomePage);
+    this.menuCtrl.close();
+  }
+
   goToLog(){
     this.navCtrl.push(LoginPage);
     this.menuCtrl.close();

@@ -21,11 +21,11 @@
   Here there are the list of trailers
 
   <div *ngFor="let movie of movies" class="list">
-    <!--<div class="card" (click)="goToTrailer(movie)">-->
-    <div class="card">
+    <div class="card" (click)="goToTrailer(movie)">
+    <!--<div class="card">-->
       <img [src]="movie.poster"/>
       <div class="text-container">
-        <h3>{{movie.title}}</h3>
+        <h2>{{movie.title}}</h2>
         <p>{{movie.studio}}</p>
       </div>
     </div>
