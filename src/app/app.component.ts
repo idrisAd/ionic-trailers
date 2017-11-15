@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import {NavController, Platform} from 'ionic-angular';
+import {MenuController, NavController, Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -11,9 +11,10 @@ import { LoginPage } from '../pages/login/login';
 })
 export class MyApp {
   @ViewChild ('mycontent') navCtrl: NavController;
+  @ViewChild('menu') menuCtrl: MenuController;
   rootPage:any = HomePage;
 
-  loginPage:any = LoginPage;
+  //loginPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -24,8 +25,10 @@ export class MyApp {
     });
   }
 
-  goTo(page:any){
-    this.navCtrl.push(page);
+  goToLog(){
+    this.navCtrl.push(LoginPage);
+    this.menuCtrl.close();
   }
+
 }
 

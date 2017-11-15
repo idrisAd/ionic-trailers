@@ -1,4 +1,4 @@
-<ion-menu [content]="mycontent">
+<ion-menu #menu [content]="mycontent">
   <ion-content>
     <ion-list>
       <ion-list-header>
@@ -7,7 +7,7 @@
       <button ion-item>
         Trailers
       </button>
-      <button ion-item (click)="goTo(loginPage)">
+      <button ion-item (click)="goToLog()">
         <ion-icon name="contact"> Profil</ion-icon>
       </button>
 
