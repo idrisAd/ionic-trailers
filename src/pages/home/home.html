@@ -20,11 +20,11 @@
 <ion-content padding>
   <p>Here is the list of films</p>
 
-  <div *ngFor="let movie of movies" class="list">
-    <div class="card" (click)="goToTrailer(movie)">
+  <div *ngFor="let movie of movies" class="list" (click)="goToTrailer(movie)">
+    <div class="card" >
     <!--<div class="card">-->
-      <img [src]="movie.poster"/>
-      <div class="text-container">
+      <img [src]="movie.poster" />
+      <div class="text-container" >
         <h2>{{movie.title}}</h2>
         <p>{{movie.studio}}</p>
         <p> --------------- </p>
