@@ -1,8 +1,27 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Profile</ion-title>
+    <ion-title>Login</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding></ion-content>
+<ion-content padding>
+  <ion-list>
+  <ion-item>
+    <ion-input type="text" placeholder="Mail"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" placeholder="Password"></ion-input>
+  </ion-item>
+
+    <ion-item>
+      <ion-label>Se souvenir de moi</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+
+  </ion-list>
+  <button (click)="showAlert()">Sign in</button>
+
+
+</ion-content>

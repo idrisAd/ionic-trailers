@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -8,8 +8,17 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
 
+  }
+
+  showAlert()  {
+    let alert = this.alertCtrl.create({
+      title: 'Sign in',
+      subTitle: 'Test button',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {

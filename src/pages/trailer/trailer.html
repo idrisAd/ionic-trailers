@@ -10,9 +10,9 @@
     <h3>{{trailer.title}}</h3><br>
     <img [src]="trailer.poster" alt="affiche"><br>
 
-    <h5>{{trailer.directors}}</h5>
+    <h5>Director(s): {{trailer.directors}}</h5>
     <div *ngFor="let g of trailer.genre" align="center">
-      <span> {{g}}</span>
+      <span>Genre: {{g}}</span>
     </div>
 
     <h5>Distribution</h5>
